@@ -2,11 +2,14 @@
 
 In this section of Active Directory, we are going to create a policy regarding password resets, enabling, and disabling accounts. 
 
-1. To get started we're going to login to the domain controller VM with the admin credentials that we used last time.
+To get started we're going to login to the domain controller VM with the admin credentials that we used last time.
+
+# Setting up Group Policy
 
 1. Open the Group Policy Management Console (GPMC)
 Log in to a machine with Group Policy Management Console installed (typically, a Domain Controller).
 Click Start, and type gpmc.msc in the search box, then press Enter. This opens the Group Policy Management Console.
+
 2. Create or Edit a Group Policy Object (GPO)
 In the GPMC, navigate to the Group Policy Objects section. This can be found by expanding the left pane as shown below
 
@@ -20,25 +23,44 @@ Give the new GPO a descriptive name if you're creating a new one, like "Account 
 3. Navigate to the Account Lockout Policy Settings
 In the Group Policy Management Editor, expand the following:
 Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
+
+<img width="980" height="700" alt="image" src="https://github.com/user-attachments/assets/97d4f8de-7b2c-457a-84ff-6fbb9daa23e0" />
+
+
+
 4. Configure Account Lockout Policy Settings
 You will see three primary settings that you need to configure:
+
 Account Lockout Duration:
-Definition: The time in minutes that an account remains locked before it is automatically unlocked.
-Configuration: Double-click on this setting, select Define this policy setting, and then set the duration (e.g., 30 minutes).
+
+**Definition:** The time in minutes that an account remains locked before it is automatically unlocked.
+
+**Configuration:** Double-click on this setting, select Define this policy setting, and then set the duration for 30 minutes, click apply and click ok twice.
+
 Account Lockout Threshold:
-Definition: The number of failed logon attempts that will trigger an account lockout.
-Configuration: Double-click on this setting, select Define this policy setting, and then set the threshold (e.g., 3 invalid attempts).
+
+**Definition:** The number of failed logon attempts that will trigger an account lockout.
+
+**Configuration:** Double-click on this setting, select Define this policy setting, and then set the threshold to 5 failed login attempts, click apply and click ok..
+
+Allow Administrator account lockout:
+
+**Definition:** This allows the administrator to lock an account from the overall domain (i.e. account user no longer works at the company).
+
+**Configuration:** Double-click on this setting, select Define this policy setting to "Enabled", click apply and click ok.
+
 Reset Account Lockout Counter After:
-Definition: The time in minutes after which the failed logon attempts counter is reset to 0, assuming there are no additional failed logon attempts.
-Configuration: Double-click on this setting, select Define this policy setting, and then set the time (e.g., 15 minutes).
-5. Link the GPO to an Organizational Unit (OU)
-Once the GPO is configured, you need to link it to the appropriate Organizational Unit (OU) or domain where you want the policy to apply.
-In the GPMC, right-click the OU or domain where you want to apply the GPO and select Link an Existing GPO.
-Choose the GPO you created or modified earlier and click OK.
-6. Update Group Policy
+
+**Definition:** The time in minutes after which the failed logon attempts counter is reset to 0, assuming there are no additional failed logon attempts.
+
+**Configuration:** Double-click on this setting, select Define this policy setting, and then set the time for 10 minutes, click apply and click ok..
+
+
+5. Update Group Policy
 You can wait for the Group Policy to propagate automatically, or you can force an update immediately.
 On a client machine or server, open Command Prompt and type gpupdate /force, then press Enter.
-7. Verify the Policy
+
+6. Verify the Policy
 To verify the policy, you can use the rsop.msc (Resultant Set of Policy) tool on a client machine to see the applied settings.
 Alternatively, you can also check the settings using the Group Policy Management Console.
 Important Considerations
