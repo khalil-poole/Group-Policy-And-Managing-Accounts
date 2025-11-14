@@ -4,7 +4,7 @@ In this section of Active Directory, we are going to create a policy regarding p
 
 To get started we're going to login to the domain controller VM with the admin credentials that we used last time.
 
-# Setting up Group Policy
+### Setting up Group Policy
 
 1. Open the Group Policy Management Console (GPMC)
 Log in to a machine with Group Policy Management Console installed (typically, a Domain Controller).
@@ -80,7 +80,7 @@ Account Lockout Duration: Setting this too high can be inconvenient for users bu
 
 Reset Account Lockout Counter After: Setting this too short could allow attackers to repeatedly attempt to log in without triggering a lockout.
 
-# Login Attempts
+### Login Attempts
 
 1. In the domain controller vm, go to the Start Menu, the go to "Windows Administrative Tools", then scroll down and click on "Active Directory Users and Computers". Expand "mydomain.com" and then click "_EMPLOYEES" and you should see a bunch of users.
 
@@ -108,7 +108,7 @@ After 5 attempts, go back to the domain controller and observe the user account 
 After unlocking the account, attempt to login the client vm with the credentials associated with the user.
 
 
-# Password Reset
+### Password Reset
 
 One thing that will occur in a real life scenario is resetting a password for a user to log back in to their account. Back in the domain vm with Active Directory Users and Computers (ADUC) opened, right click on the user that's been the test subject for this lab, and then click on "Reset Password."
 
@@ -123,7 +123,7 @@ From there, type in the new password as "Password2" and the check the box that s
 Exit and reenter the client vm with the user and their new password.
 
 
-# Enabling and Disabling Accounts
+### Enabling and Disabling Accounts
 
 This can be done by right clicking on the user, and enable / disable the account.
 
