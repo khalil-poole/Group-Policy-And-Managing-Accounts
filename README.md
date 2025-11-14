@@ -8,9 +8,15 @@ In this section of Active Directory, we are going to create a policy regarding p
 Log in to a machine with Group Policy Management Console installed (typically, a Domain Controller).
 Click Start, and type gpmc.msc in the search box, then press Enter. This opens the Group Policy Management Console.
 2. Create or Edit a Group Policy Object (GPO)
-In the GPMC, navigate to the Group Policy Objects section.
-Right-click Group Policy Objects and select New to create a new GPO, or right-click an existing GPO and select Edit to modify it.
+In the GPMC, navigate to the Group Policy Objects section. This can be found by expanding the left pane as shown below
+
+<img width="951" height="656" alt="image" src="https://github.com/user-attachments/assets/7fa33eb2-d1d2-4bfc-8717-a54960bb788a" />
+
+
+Right-click Default Domain Policy and select Edit to modify the exisiting GPO
 Give the new GPO a descriptive name if you're creating a new one, like "Account Lockout Policy".
+
+
 3. Navigate to the Account Lockout Policy Settings
 In the Group Policy Management Editor, expand the following:
 Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
