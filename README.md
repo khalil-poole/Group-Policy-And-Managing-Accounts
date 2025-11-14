@@ -13,5 +13,5 @@ In this section of Active Directory, we are going to create a policy regarding p
   
 4. Pick a random user account we created previously with the Powershell script. As a reminder, that the password for all the generated users created is "Password1" with no quotations.
 
-5. Remote desktop the client vm and attempt to log in using "mydomain.com\<firstname>.<lastname>" with it 10 times with a bad password.
+5. Remote desktop the client vm and attempt to log in using "mydomain.com\firstname.lastname" with it 10 times with a bad password.
 
