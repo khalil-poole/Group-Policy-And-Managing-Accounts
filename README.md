@@ -56,16 +56,23 @@ Reset Account Lockout Counter After:
 **Configuration:** Double-click on this setting, select Define this policy setting, and then set the time for 10 minutes, click apply and click ok..
 
 
+
 5. Update Group Policy
-You can wait for the Group Policy to propagate automatically, or you can force an update immediately.
-On a client machine or server, open Command Prompt and type gpupdate /force, then press Enter.
+You can wait for the Group Policy to propagate automatically, or you can force an update immediately. Login to the client vm as jane admin, open Command Prompt and type gpupdate /force, then press Enter.
+
 
 6. Verify the Policy
 To verify the policy, you can use the rsop.msc (Resultant Set of Policy) tool on a client machine to see the applied settings.
+
+
 Alternatively, you can also check the settings using the Group Policy Management Console.
-Important Considerations
+
+***Important Considerations***
+
 Account Lockout Threshold: Setting this too low (e.g., 1 or 2 attempts) can lead to unnecessary lockouts.
+
 Account Lockout Duration: Setting this too high can be inconvenient for users but increases security.
+
 Reset Account Lockout Counter After: Setting this too short could allow attackers to repeatedly attempt to log in without triggering a lockout.
 
 
