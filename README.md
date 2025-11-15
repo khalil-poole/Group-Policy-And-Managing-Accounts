@@ -130,7 +130,7 @@ This can be done by right clicking on the user, and enable / disable the account
 <img width="527" height="478" alt="image" src="https://github.com/user-attachments/assets/3edec0a6-5abc-4f89-aab1-fd32b7cf02cc" />
 
 
-This concludes Active Directory portion. We seen how important Group Policy is as a concept, and how it handles day to day operations for enterprises across the globe. Without it, it would be very difficult for employees and clients within an organization to ensure smooth operations using computers and networks. On to the final section when you're ready, Network and Sharing Permissions[https://github.com/khalil-poole/Network-Sharing-And-Permissions/].
+This concludes Active Directory portion. We seen how important Group Policy is as a concept, and how it handles day to day operations for enterprises across the globe. Without it, it would be very difficult for employees and clients within an organization to ensure smooth operations using computers and networks. On to the final section when you're ready, [Network and Sharing Permissions](https://github.com/khalil-poole/Network-Sharing-And-Permissions).
 
 Remember, do not forget to stop the VM!! 
 
